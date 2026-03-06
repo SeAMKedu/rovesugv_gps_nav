@@ -29,6 +29,7 @@ setup(
     entry_points={
         'console_scripts': [
             'gps_waypoint_commander = rovesugv_gps_nav.gps_waypoint_commander:main',
+            'velocity_forwarder = rovesugv_gps_nav.velocity_forwarder:main',
         ],
     },
 )

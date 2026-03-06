@@ -16,7 +16,7 @@ def generate_launch_description():
                 "--z", "-0.385",
                 "--roll", "0.0",
                 "--pitch", "0.0",
-                "--yaw", "3.142",
+                "--yaw", "0.0",
                 "--frame-id", "vrtk_link",
                 "--child-frame-id", "panther/base_link"
             ]

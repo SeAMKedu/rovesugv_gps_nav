@@ -45,20 +45,15 @@ def generate_launch_description():
 
     lifecycle_nodes = [
         'controller_server',
-        #'smoother_server',
+        'smoother_server',
         'planner_server',
         'behavior_server',
-        #'velocity_smoother',
+        'velocity_smoother',
         'bt_navigator',
         'waypoint_follower',
     ]
 
     # Map fully qualified names to relative ones so the node's namespace can be prepended.
-    # In case of the transforms (tf), currently, there doesn't seem to be a better alternative
-    # https://github.com/ros/geometry2/issues/32
-    # https://github.com/ros/robot_state_publisher/pull/30
-    # TODO(orduno) Substitute with `PushNodeRemapping`
-    #              https://github.com/ros2/launch_ros/issues/56
     remappings = [('/tf', 'tf'), ('/tf_static', 'tf_static')]
 
     # Create our own temporary YAML files that include substitutions
@@ -148,7 +143,7 @@ def generate_launch_description():
                 respawn_delay=2.0,
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
-                #remappings=remappings + [('cmd_vel', 'cmd_vel_nav')],
+                remappings=remappings + [('cmd_vel', 'cmd_vel_nav')],
             ),
             Node(
                 package='nav2_smoother',
@@ -181,7 +176,7 @@ def generate_launch_description():
                 respawn_delay=2.0,
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
-                #remappings=remappings + [('cmd_vel', 'cmd_vel_nav')],
+                remappings=remappings + [('cmd_vel', 'cmd_vel_nav')],
             ),
             Node(
                 package='nav2_bt_navigator',
@@ -190,7 +185,6 @@ def generate_launch_description():
                 output='screen',
                 respawn=use_respawn,
                 respawn_delay=2.0,
-                #parameters=[configured_params],
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings,
@@ -215,8 +209,10 @@ def generate_launch_description():
                 respawn_delay=2.0,
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
-                #remappings=remappings
-                #+ [('cmd_vel', 'cmd_vel_nav')],
+                remappings=remappings + [
+                    ('cmd_vel', 'cmd_vel_nav'),
+                    ('cmd_vel_smoothed', 'panther/cmd_vel')
+                ],
             ),
             Node(
                 package='nav2_collision_monitor',

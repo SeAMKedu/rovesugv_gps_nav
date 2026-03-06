@@ -52,8 +52,8 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(fixpos_cmd)
-    ld.add_action(navigation2_cmd)
     ld.add_action(navsat_cmd)
-    ld.add_action(mapviz_cmd)
+    #ld.add_action(navigation2_cmd)
+    #ld.add_action(mapviz_cmd)
 
     return ld

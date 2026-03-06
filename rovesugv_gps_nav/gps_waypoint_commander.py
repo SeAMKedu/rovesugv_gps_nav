@@ -29,6 +29,7 @@ class InteractiveGpsWpCommander(Node):
 
         self.get_logger().info('Ready for waypoints...')
 
+
     def mapviz_wp_cb(self, msg: PointStamped):
         """
         clicked point callback, sends received point to nav2 gps waypoint follower if its a geographic point
@@ -49,14 +50,24 @@ class InteractiveGpsWpCommander(Node):
             self.get_logger().info("Waypoint added to conversion queue...")
             self.client_futures.append(self.localizer.call_async(self.req))
 
+
     def command_send_cb(self, future: Future):
         self.resp = PoseStamped()
-
         self.resp.header.frame_id = 'map'
         self.resp.header.stamp = self.get_clock().now().to_msg()
         self.resp.pose.position = future.result().map_point
     
         self.navigator.goToPose(self.resp)
+
+        while not self.navigator.isTaskComplete():
+            feedback = self.navigator.getFeedback()
+            if feedback:
+               print(feedback)
+               continue
+
+        result = self.navigator.getResult()
+        print(result) 
+
 
     def spin(self):
         while rclpy.ok():
@@ -70,6 +81,7 @@ class InteractiveGpsWpCommander(Node):
                     incomplete_futures.append(f)
                     
             self.client_futures = incomplete_futures
+
 
 def main():
     rclpy.init()
