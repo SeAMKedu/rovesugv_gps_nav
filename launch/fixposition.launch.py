@@ -11,9 +11,9 @@ def generate_launch_description():
             executable="static_transform_publisher",
             name="static_transform_vrtk_base",
             arguments=[
-                "--x", "-0.185",
+                "--x", "0.19",
                 "--y", "0.0",
-                "--z", "-0.385",
+                "--z", "-0.39",
                 "--roll", "0.0",
                 "--pitch", "0.0",
                 "--yaw", "0.0",

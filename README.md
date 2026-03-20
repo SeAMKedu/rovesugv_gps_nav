@@ -40,12 +40,12 @@ $ ros2 launch rovesugv_gps_nav navigation.launch.py
 ROS 2 -solmu, joka käynnistää navigoinnin Mapviz-kartalla klikattuun pisteeseen:
 ```
 $ source install/setup.bash
-$ ros2 run rovesugv_gps_nav gps_waypoint_commander
+$ ros2 run rovesugv_gps_nav interactive_waypoint_commander
 ```
 **/cmd_vel** aiheen tilaus ja julkaistujen viestien lähetys **/panther/cmd_vel** aiheeseen.
 ```
 $ source install/setup.bash
-$ ros2 run rovesugv_gps_nav velocity_forwarder
+$ ros2 run rovesugv_gps_nav cmd_vel_converter
 ```
 
 ## RovesUGV-hanke

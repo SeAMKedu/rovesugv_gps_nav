@@ -1,6 +1,5 @@
 import rclpy
 from geometry_msgs.msg import PointStamped, PoseStamped
-from nav2_msgs.action import FollowWaypoints
 from nav2_simple_commander.robot_navigator import BasicNavigator
 from rclpy.node import Node
 from rclpy.task import Future
@@ -53,10 +52,10 @@ class InteractiveGpsWpCommander(Node):
 
     def command_send_cb(self, future: Future):
         self.resp = PoseStamped()
-        self.resp.header.frame_id = 'map'
+        self.resp.header.frame_id = "map"
         self.resp.header.stamp = self.get_clock().now().to_msg()
         self.resp.pose.position = future.result().map_point
-    
+        print(f'Goal pose: {self.resp.pose}')
         self.navigator.goToPose(self.resp)
 
         while not self.navigator.isTaskComplete():
@@ -81,7 +80,6 @@ class InteractiveGpsWpCommander(Node):
                     incomplete_futures.append(f)
                     
             self.client_futures = incomplete_futures
-
 
 def main():
     rclpy.init()
