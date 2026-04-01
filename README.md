@@ -3,6 +3,11 @@
 # rovesugv_gps_nav
 ROS 2 -paketti Husarion Panther -mobiilirobotin GPS-navigointia varten.
 
+## Ohjelmistoriippuvuudet
+```
+$ sudo apt install ros-humble-spatio-temporal-voxel-layer
+```
+
 ## Ohjelmien käynnistys
 
 ### Fixposition
