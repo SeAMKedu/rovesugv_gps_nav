@@ -51,6 +51,7 @@ def generate_launch_description():
         'velocity_smoother',
         'bt_navigator',
         'waypoint_follower',
+    #    'collision_monitor',
     ]
 
     # Map fully qualified names to relative ones so the node's namespace can be prepended.
@@ -125,7 +126,7 @@ def generate_launch_description():
             shared_dir, "config", "navigate_to_pose_w_replanning_and_recovery.xml"
         )
     }
-    nav_throught_poses_bt = {
+    nav_through_poses_bt = {
         "default_nav_through_poses_bt_xml": os.path.join(
             shared_dir, "config", "navigate_through_poses_w_replanning_and_recovery.xml"
         )
@@ -211,7 +212,7 @@ def generate_launch_description():
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings + [
                     ('cmd_vel', 'cmd_vel_nav'),
-                    ('cmd_vel_smoothed', 'panther/cmd_vel')
+                    ('cmd_vel_smoothed', '/panther/cmd_vel')
                 ],
             ),
             Node(
