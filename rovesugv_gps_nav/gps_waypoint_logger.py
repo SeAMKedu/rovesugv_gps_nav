@@ -173,9 +173,9 @@ class GPSWaypointLogger(ctk.CTk, Node):
         waypoint = {
             "latitude": self.navsatfix_msg.latitude,
             "longitude": self.navsatfix_msg.longitude,
-            "altitude": self.navsatfix_msg.altitude,
+            #"altitude": self.navsatfix_msg.altitude,
             "yaw": self.yaw,
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            #"timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
         #self.get_logger().info(json.dumps(waypoint))
 

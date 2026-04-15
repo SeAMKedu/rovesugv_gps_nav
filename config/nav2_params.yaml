@@ -156,27 +156,27 @@ local_costmap:
         transform_tolerance: 0.2
         mapping_mode: false
         map_save_duration: 60.0
-        observation_sources: pointcloud # laserscan
-        pointcloud:
-          data_type: PointCloud2
-          topic: /panther/velodyne/velodyne_points
-          marking: true
-          clearing: true
-          obstacle_range: 3.0
-          min_obstacle_height: 0.0
-          max_obstacle_height: 2.0
-          expected_update_rate: 0.0
-          observation_persistence: 0.0
-          inf_is_valid: true # true for outdoor navigation
-          filter: "voxel"
-          voxel_min_points: 2
-          clear_after_reading: true
-          max_z: 7.0
-          min_z: 0.1
-          vertical_fov_angle: 0.8745
-          horizontal_fov_angle: 1.048
-          decay_acceleration: 15.0
-          model_type: 0
+        observation_sources: laserscan # pointcloud
+        # pointcloud:
+        #   data_type: PointCloud2
+        #   topic: /panther/velodyne/velodyne_points
+        #   marking: true
+        #   clearing: true
+        #   obstacle_range: 3.0
+        #   min_obstacle_height: 0.0
+        #   max_obstacle_height: 2.0
+        #   expected_update_rate: 0.0
+        #   observation_persistence: 0.0
+        #   inf_is_valid: true # true for outdoor navigation
+        #   filter: "voxel"
+        #   voxel_min_points: 2
+        #   clear_after_reading: true
+        #   max_z: 7.0
+        #   min_z: 0.1
+        #   vertical_fov_angle: 0.8745
+        #   horizontal_fov_angle: 1.048
+        #   decay_acceleration: 15.0
+        #   model_type: 0
         laserscan:
           data_type: LaserScan
           topic: /panther/velodyne/scan
@@ -236,27 +236,27 @@ global_costmap:
         transform_tolerance: 0.2
         mapping_mode: false
         map_save_duration: 60.0
-        observation_sources: pointcloud # laserscan
-        pointcloud:
-          data_type: PointCloud2
-          topic: /panther/velodyne/velodyne_points
-          marking: true
-          clearing: true
-          obstacle_range: 8.0
-          min_obstacle_height: 0.0
-          max_obstacle_height: 2.0
-          expected_update_rate: 0.0
-          observation_persistence: 0.0
-          inf_is_valid: true
-          filter: "voxel"
-          voxel_min_points: 2
-          clear_after_reading: true
-          max_z: 7.0
-          min_z: 0.1
-          vertical_fov_angle: 0.8745
-          horizontal_fov_angle: 1.048
-          decay_acceleration: 15.0
-          model_type: 0
+        observation_sources: laserscan # laserscan
+        # pointcloud:
+        #   data_type: PointCloud2
+        #   topic: /panther/velodyne/velodyne_points
+        #   marking: true
+        #   clearing: true
+        #   obstacle_range: 8.0
+        #   min_obstacle_height: 0.0
+        #   max_obstacle_height: 2.0
+        #   expected_update_rate: 0.0
+        #   observation_persistence: 0.0
+        #   inf_is_valid: true
+        #   filter: "voxel"
+        #   voxel_min_points: 2
+        #   clear_after_reading: true
+        #   max_z: 7.0
+        #   min_z: 0.1
+        #   vertical_fov_angle: 0.8745
+        #   horizontal_fov_angle: 1.048
+        #   decay_acceleration: 15.0
+        #   model_type: 0
         laserscan:
           data_type: LaserScan
           topic: /panther/velodyne/scan
