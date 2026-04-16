@@ -30,7 +30,7 @@ setup(
         'console_scripts': [
             'cmd_vel_converter = rovesugv_gps_nav.cmd_vel_converter:main',
             'gps_waypoint_logger = rovesugv_gps_nav.gps_waypoint_logger:main',
-            'interactive_waypoint_follower = rovesugv_gps_nav.interactive_waypoint_follower:main',
+            'interactive_waypoint_follower = rovesugv_gps_nav.interactive_waypoint_commander:main',
             'logged_waypoint_follower = rovesugv_gps_nav.logged_waypoint_follower:main',
         ],
     },
