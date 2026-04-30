@@ -1,0 +1,256 @@
+user@usercomputer:~/husarion_ugv_autonomy_ros/docker$ docker compose -f "compose.navigation.yaml" up
+Attaching to navigation
+navigation  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-04-30-08-02-55-447841-usercomputer-1
+navigation  | [INFO] [launch]: Default logging verbosity is set to INFO
+navigation  | [INFO] [pointcloud_to_laserscan_node-1]: process started with pid [78]
+navigation  | [INFO] [component_container_isolated-2]: process started with pid [80]
+navigation  | [INFO] [map_saver_server-3]: process started with pid [82]
+navigation  | [INFO] [lifecycle_manager-4]: process started with pid [84]
+navigation  | [INFO] [sync_slam_toolbox_node-5]: process started with pid [86]
+navigation  | [INFO] [map_autosaver_node-6]: process started with pid [106]
+navigation  | [lifecycle_manager-4] [INFO] [1777536176.975689431] [panther.lifecycle_manager_slam]: Creating
+navigation  | [lifecycle_manager-4] [INFO] [1777536177.032429336] [panther.lifecycle_manager_slam]: Creating and initializing lifecycle service clients
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536177.065194710] [panther.slam_toolbox]: Node using stack size 40000000
+navigation  | [map_saver_server-3] [INFO] [1777536177.102128346] [panther.map_saver]: 
+navigation  | [map_saver_server-3] 	map_saver lifecycle node launched. 
+navigation  | [map_saver_server-3] 	Waiting on external lifecycle transitions to activate
+navigation  | [map_saver_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [map_saver_server-3] [INFO] [1777536177.115243648] [panther.map_saver]: Creating
+navigation  | [map_autosaver_node-6] [INFO] [1777536177.117276962] [panther.map_autosaver]: Map saver initialized with period 15 seconds
+navigation  | [component_container_isolated-2] [INFO] [1777536177.175482418] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libcontroller_server_core.so
+navigation  | [lifecycle_manager-4] [INFO] [1777536177.183507572] [panther.lifecycle_manager_slam]: Starting managed nodes bringup...
+navigation  | [lifecycle_manager-4] [INFO] [1777536177.183695546] [panther.lifecycle_manager_slam]: Configuring map_saver
+navigation  | [map_saver_server-3] [INFO] [1777536177.186971811] [panther.map_saver]: Configuring
+navigation  | [lifecycle_manager-4] [INFO] [1777536177.203378771] [panther.lifecycle_manager_slam]: Activating map_saver
+navigation  | [map_saver_server-3] [INFO] [1777536177.203912548] [panther.map_saver]: Activating
+navigation  | [map_saver_server-3] [INFO] [1777536177.203992775] [panther.map_saver]: Creating bond (map_saver) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536177.211640541] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.211765697] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.300286048] [panther.controller_server]: 
+navigation  | [component_container_isolated-2] 	controller_server lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [lifecycle_manager-4] [INFO] [1777536177.328542957] [panther.lifecycle_manager_slam]: Server map_saver connected with bond.
+navigation  | [lifecycle_manager-4] [INFO] [1777536177.328666001] [panther.lifecycle_manager_slam]: Managed nodes are active
+navigation  | [lifecycle_manager-4] [INFO] [1777536177.328697330] [panther.lifecycle_manager_slam]: Creating bond timer...
+navigation  | [component_container_isolated-2] [INFO] [1777536177.348982750] [panther.controller_server]: Creating controller server
+navigation  | [component_container_isolated-2] [INFO] [1777536177.415915783] [panther.local_costmap.local_costmap]: 
+navigation  | [component_container_isolated-2] 	local_costmap lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [component_container_isolated-2] [INFO] [1777536177.430279669] [panther.local_costmap.local_costmap]: Creating Costmap
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/controller_server' in container 'panther/nav2_container'
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536177.458559843] [panther.slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536177.462939312] [panther.slam_toolbox]: CeresSolver: Using SCHUR_JACOBI preconditioner.
+navigation  | [component_container_isolated-2] [INFO] [1777536177.467917264] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libsmoother_server_core.so
+navigation  | [component_container_isolated-2] [INFO] [1777536177.484413954] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.485641130] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+navigation  | [pointcloud_to_laserscan_node-1] [INFO] [1777536177.508799635] [panther.pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+navigation  | [component_container_isolated-2] [INFO] [1777536177.540785848] [panther.smoother_server]: 
+navigation  | [component_container_isolated-2] 	smoother_server lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [component_container_isolated-2] [INFO] [1777536177.548762104] [panther.smoother_server]: Creating smoother server
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/smoother_server' in container 'panther/nav2_container'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.556224360] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libplanner_server_core.so
+navigation  | [component_container_isolated-2] [INFO] [1777536177.558016898] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.558103557] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.595420085] [panther.planner_server]: 
+navigation  | [component_container_isolated-2] 	planner_server lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [component_container_isolated-2] [INFO] [1777536177.601384021] [panther.planner_server]: Creating
+navigation  | [component_container_isolated-2] [INFO] [1777536177.642259255] [panther.global_costmap.global_costmap]: 
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/planner_server' in container 'panther/nav2_container'
+navigation  | [component_container_isolated-2] 	global_costmap lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [component_container_isolated-2] [INFO] [1777536177.643771144] [panther.global_costmap.global_costmap]: Creating Costmap
+navigation  | [component_container_isolated-2] [INFO] [1777536177.659382814] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libbehavior_server_core.so
+navigation  | [component_container_isolated-2] [INFO] [1777536177.671131416] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.671699978] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.698290594] [panther.behavior_server]: 
+navigation  | [component_container_isolated-2] 	behavior_server lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/behavior_server' in container 'panther/nav2_container'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.728097888] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libbt_navigator_core.so
+navigation  | [component_container_isolated-2] [INFO] [1777536177.733547280] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.735603826] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536177.760454641] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536177.581 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.791284113] [panther.bt_navigator]: 
+navigation  | [component_container_isolated-2] 	bt_navigator lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/bt_navigator' in container 'panther/nav2_container'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.791525817] [panther.bt_navigator]: Creating
+navigation  | [component_container_isolated-2] [INFO] [1777536177.813631040] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libwaypoint_follower_core.so
+navigation  | [component_container_isolated-2] [INFO] [1777536177.817135728] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.817244692] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536177.851577156] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536177.680 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.864019156] [panther.waypoint_follower]: 
+navigation  | [component_container_isolated-2] 	waypoint_follower lifecycle node launched. 
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [component_container_isolated-2] [INFO] [1777536177.873672395] [panther.waypoint_follower]: Creating
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/waypoint_follower' in container 'panther/nav2_container'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.886835890] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libvelocity_smoother_core.so
+navigation  | [component_container_isolated-2] [INFO] [1777536177.891583883] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.891700911] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.949002306] [panther.velocity_smoother]: 
+navigation  | [component_container_isolated-2] 	velocity_smoother lifecycle node launched. 
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/velocity_smoother' in container 'panther/nav2_container'
+navigation  | [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+navigation  | [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536177.954641687] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536177.790 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.957403408] [panther.nav2_container]: Load Library: /opt/ros/humble/lib/libnav2_lifecycle_manager_core.so
+navigation  | [component_container_isolated-2] [INFO] [1777536177.959000675] [panther.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.959079910] [panther.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+navigation  | [component_container_isolated-2] [INFO] [1777536177.980618939] [panther.lifecycle_manager_navigation]: Creating
+navigation  | [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/panther/lifecycle_manager_navigation' in container 'panther/nav2_container'
+navigation  | [component_container_isolated-2] [INFO] [1777536177.992077355] [panther.lifecycle_manager_navigation]: Creating and initializing lifecycle service clients
+navigation  | [component_container_isolated-2] [INFO] [1777536178.021234325] [panther.lifecycle_manager_navigation]: Starting managed nodes bringup...
+navigation  | [component_container_isolated-2] [INFO] [1777536178.022775943] [panther.lifecycle_manager_navigation]: Configuring controller_server
+navigation  | [component_container_isolated-2] [INFO] [1777536178.026669060] [panther.controller_server]: Configuring controller interface
+navigation  | [component_container_isolated-2] [INFO] [1777536178.027403868] [panther.controller_server]: getting goal checker plugins..
+navigation  | [component_container_isolated-2] [INFO] [1777536178.028440957] [panther.controller_server]: Controller frequency set to 10.0000Hz
+navigation  | [component_container_isolated-2] [INFO] [1777536178.028771880] [panther.local_costmap.local_costmap]: Configuring
+navigation  | [component_container_isolated-2] [INFO] [1777536178.054109239] [panther.local_costmap.local_costmap]: Using plugin "voxel_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.069041271] [panther.local_costmap.local_costmap]: Subscribed to Topics: point_cloud
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.078625963] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536177.894 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536178.096589741] [panther.local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.096711857] [panther.local_costmap.local_costmap]: Using plugin "inflation_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.103963386] [panther.local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.144835613] [panther.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+navigation  | [component_container_isolated-2] [INFO] [1777536178.152835102] [panther.controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+navigation  | [component_container_isolated-2] [INFO] [1777536178.158034373] [panther.controller_server]: Controller Server has goal_checker  goal checkers available.
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.160643033] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536177.996 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536178.165119849] [panther.controller_server]: Created controller : FollowPath of type nav2_mppi_controller::MPPIController
+navigation  | [component_container_isolated-2] [INFO] [1777536178.182500664] [panther.controller_server]: Controller period is equal to model dt. Control sequence shifting is ON
+navigation  | [component_container_isolated-2] [INFO] [1777536178.189830340] [panther.controller_server]: ConstraintCritic instantiated with 1 power and 4.000000 weight.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.189987977] [panther.controller_server]: Critic loaded : mppi::critics::ConstraintCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.196985674] [panther.controller_server]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.015000 weights. Critic will collision check based on footprint cost.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.197329173] [panther.controller_server]: Critic loaded : mppi::critics::CostCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.201337302] [panther.controller_server]: GoalCritic instantiated with 1 power and 5.000000 weight.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.201442041] [panther.controller_server]: Critic loaded : mppi::critics::GoalCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.205797606] [panther.controller_server]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.100000 angular threshold.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.205906089] [panther.controller_server]: Critic loaded : mppi::critics::GoalAngleCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.216744230] [panther.controller_server]: ReferenceTrajectoryCritic instantiated with 1 power and 14.000000 weight
+navigation  | [component_container_isolated-2] [INFO] [1777536178.216952748] [panther.controller_server]: Critic loaded : mppi::critics::PathAlignCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.223556353] [panther.controller_server]: Critic loaded : mppi::critics::PathFollowCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.232156053] [panther.controller_server]: PathAngleCritic instantiated with 1 power and 2.000000 weight. Reversing allowed.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.233887981] [panther.controller_server]: Critic loaded : mppi::critics::PathAngleCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.237413310] [panther.controller_server]: PreferForwardCritic instantiated with 1 power and 7.000000 weight.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.237505153] [panther.controller_server]: Critic loaded : mppi::critics::PreferForwardCritic
+navigation  | [component_container_isolated-2] [INFO] [1777536178.240586629] [panther.controller_server]: Optimizer reset
+navigation  | [component_container_isolated-2] [INFO] [1777536178.253878064] [MPPIController]: Configured MPPI Controller: FollowPath
+navigation  | [component_container_isolated-2] [INFO] [1777536178.255536549] [panther.controller_server]: Controller Server has FollowPath  controllers available.
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.274093882] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.098 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536178.274401124] [panther.lifecycle_manager_navigation]: Configuring smoother_server
+navigation  | [component_container_isolated-2] [INFO] [1777536178.274792049] [panther.smoother_server]: Configuring smoother server
+navigation  | [component_container_isolated-2] [INFO] [1777536178.287330276] [panther.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+navigation  | [component_container_isolated-2] [INFO] [1777536178.290446440] [panther.smoother_server]: Smoother Server has simple_smoother  smoothers available.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.304227748] [panther.lifecycle_manager_navigation]: Configuring planner_server
+navigation  | [component_container_isolated-2] [INFO] [1777536178.304658065] [panther.planner_server]: Configuring
+navigation  | [component_container_isolated-2] [INFO] [1777536178.304782581] [panther.global_costmap.global_costmap]: Configuring
+navigation  | [component_container_isolated-2] [INFO] [1777536178.323501775] [panther.global_costmap.global_costmap]: Using plugin "static_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.334331916] [panther.global_costmap.global_costmap]: Subscribing to the map topic (/panther/map) with transient local durability
+navigation  | [component_container_isolated-2] [INFO] [1777536178.335098788] [panther.global_costmap.global_costmap]: Initialized plugin "static_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.335160294] [panther.global_costmap.global_costmap]: Using plugin "voxel_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.337841821] [panther.global_costmap.global_costmap]: Subscribed to Topics: point_cloud
+navigation  | [component_container_isolated-2] [INFO] [1777536178.356957988] [panther.global_costmap.global_costmap]: Initialized plugin "voxel_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.357064199] [panther.global_costmap.global_costmap]: Using plugin "inflation_layer"
+navigation  | [component_container_isolated-2] [INFO] [1777536178.368865763] [panther.global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.380530298] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.206 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536178.394358775] [panther.planner_server]: Created global planner plugin GridBased of type nav2_smac_planner/SmacPlanner2D
+navigation  | [component_container_isolated-2] [INFO] [1777536178.394505435] [panther.planner_server]: Configuring GridBased of type SmacPlanner2D
+navigation  | [component_container_isolated-2] [INFO] [1777536178.418489023] [panther.planner_server]: Configured plugin GridBased of type SmacPlanner2D with tolerance 0.12, maximum iterations 600000, max on approach iterations 500, and allowing unknown traversal.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.418672421] [panther.planner_server]: Planner Server has GridBased  planners available.
+navigation  | [component_container_isolated-2] [INFO] [1777536178.444793869] [panther.lifecycle_manager_navigation]: Configuring behavior_server
+navigation  | [component_container_isolated-2] [INFO] [1777536178.445283229] [panther.behavior_server]: Configuring
+navigation  | [component_container_isolated-2] [INFO] [1777536178.462272703] [panther.behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+navigation  | [component_container_isolated-2] [INFO] [1777536178.464648619] [panther.behavior_server]: Configuring spin
+navigation  | [component_container_isolated-2] [INFO] [1777536178.483958841] [panther.behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.486663792] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.311 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536178.487879991] [panther.behavior_server]: Configuring backup
+navigation  | [component_container_isolated-2] [INFO] [1777536178.503369385] [panther.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+navigation  | [component_container_isolated-2] [INFO] [1777536178.506858201] [panther.behavior_server]: Configuring drive_on_heading
+navigation  | [component_container_isolated-2] [INFO] [1777536178.517583954] [panther.behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+navigation  | [component_container_isolated-2] [INFO] [1777536178.521211751] [panther.behavior_server]: Configuring wait
+navigation  | [component_container_isolated-2] [INFO] [1777536178.534755610] [panther.lifecycle_manager_navigation]: Configuring bt_navigator
+navigation  | [component_container_isolated-2] [INFO] [1777536178.535352782] [panther.bt_navigator]: Configuring
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.610613346] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.416 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536178.698575184] [panther.lifecycle_manager_navigation]: Configuring waypoint_follower
+navigation  | [component_container_isolated-2] [INFO] [1777536178.698987325] [panther.waypoint_follower]: Configuring
+navigation  | [component_container_isolated-2] [INFO] [1777536178.715359980] [panther.waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+navigation  | [component_container_isolated-2] [INFO] [1777536178.723389806] [panther.lifecycle_manager_navigation]: Configuring velocity_smoother
+navigation  | [component_container_isolated-2] [INFO] [1777536178.723884126] [panther.velocity_smoother]: Configuring velocity smoother
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.719353964] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.521 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536178.753203757] [panther.lifecycle_manager_navigation]: Activating controller_server
+navigation  | [component_container_isolated-2] [INFO] [1777536178.753602426] [panther.controller_server]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536178.753753502] [panther.local_costmap.local_costmap]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536178.753810496] [panther.local_costmap.local_costmap]: Checking transform
+navigation  | [component_container_isolated-2] [INFO] [1777536178.753873410] [panther.local_costmap.local_costmap]: Timed out waiting for transform from panther/base_link to panther/odom to become available, tf error: Invalid frame ID "panther/odom" passed to canTransform argument target_frame - frame does not exist
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.780053516] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.622 for reason 'discarding message because the queue is full'
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.874727922] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.723 for reason 'discarding message because the queue is full'
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536178.985265845] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.826 for reason 'discarding message because the queue is full'
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536179.093917372] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536178.931 for reason 'discarding message because the queue is full'
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536179.197981679] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536179.040 for reason 'discarding message because the queue is full'
+navigation  | [component_container_isolated-2] [INFO] [1777536179.253964120] [panther.local_costmap.local_costmap]: Timed out waiting for transform from panther/base_link to panther/odom to become available, tf error: Invalid frame ID "panther/odom" passed to canTransform argument target_frame - frame does not exist
+navigation  | [sync_slam_toolbox_node-5] [INFO] [1777536179.295508560] [panther.slam_toolbox]: Message Filter dropping message: frame 'panther/velodyne' at time 1777536179.141 for reason 'discarding message because the queue is full'
+navigation  | [sync_slam_toolbox_node-5] [WARN] [1777536179.297896477] [panther.slam_toolbox]: minimum laser range setting (0.6 m) exceeds the capabilities of the used Lidar (0.7 m)
+navigation  | [sync_slam_toolbox_node-5] Registering sensor: [Custom Described Lidar]
+navigation  | [component_container_isolated-2] [INFO] [1777536179.533624795] [panther.global_costmap.global_costmap]: StaticLayer: Resizing costmap to 153 X 141 at 0.050000 m/pix
+navigation  | [component_container_isolated-2] [INFO] [1777536179.754502939] [panther.local_costmap.local_costmap]: Timed out waiting for transform from panther/base_link to panther/odom to become available, tf error: Could not find a connection between 'panther/odom' and 'panther/base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+navigation  | [component_container_isolated-2] [INFO] [1777536180.254149314] [panther.local_costmap.local_costmap]: start
+navigation  | [component_container_isolated-2] [WARN] [1777536180.506102186] [panther.controller_server]: Parameter controller_server.verbose not found
+navigation  | [component_container_isolated-2] [INFO] [1777536180.507356915] [panther.controller_server]: Optimizer reset
+navigation  | [component_container_isolated-2] [INFO] [1777536180.511406261] [MPPIController]: Activated MPPI Controller: FollowPath
+navigation  | [component_container_isolated-2] [INFO] [1777536180.511525625] [panther.controller_server]: Creating bond (controller_server) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536180.627512812] [panther.lifecycle_manager_navigation]: Server controller_server connected with bond.
+navigation  | [component_container_isolated-2] [INFO] [1777536180.627684433] [panther.lifecycle_manager_navigation]: Activating smoother_server
+navigation  | [component_container_isolated-2] [INFO] [1777536180.628281444] [panther.smoother_server]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536180.628371975] [panther.smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536180.734389785] [panther.lifecycle_manager_navigation]: Server smoother_server connected with bond.
+navigation  | [component_container_isolated-2] [INFO] [1777536180.734539294] [panther.lifecycle_manager_navigation]: Activating planner_server
+navigation  | [component_container_isolated-2] [INFO] [1777536180.735183155] [panther.planner_server]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536180.735704996] [panther.global_costmap.global_costmap]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536180.735794118] [panther.global_costmap.global_costmap]: Checking transform
+navigation  | [component_container_isolated-2] [INFO] [1777536180.742991918] [panther.global_costmap.global_costmap]: start
+navigation  | [component_container_isolated-2] [INFO] [1777536180.795284352] [panther.planner_server]: Activating plugin GridBased of type SmacPlanner2D
+navigation  | [component_container_isolated-2] [INFO] [1777536180.799114715] [panther.planner_server]: Creating bond (planner_server) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536180.912815812] [panther.lifecycle_manager_navigation]: Server planner_server connected with bond.
+navigation  | [component_container_isolated-2] [INFO] [1777536180.912947048] [panther.lifecycle_manager_navigation]: Activating behavior_server
+navigation  | [component_container_isolated-2] [INFO] [1777536180.913485786] [panther.behavior_server]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536180.913543292] [panther.behavior_server]: Activating spin
+navigation  | [component_container_isolated-2] [INFO] [1777536180.913589693] [panther.behavior_server]: Activating backup
+navigation  | [component_container_isolated-2] [INFO] [1777536180.913621182] [panther.behavior_server]: Activating drive_on_heading
+navigation  | [component_container_isolated-2] [INFO] [1777536180.913647199] [panther.behavior_server]: Activating wait
+navigation  | [component_container_isolated-2] [INFO] [1777536180.913678144] [panther.behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.039586770] [panther.lifecycle_manager_navigation]: Server behavior_server connected with bond.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.039719958] [panther.lifecycle_manager_navigation]: Activating bt_navigator
+navigation  | [component_container_isolated-2] [INFO] [1777536181.040288744] [panther.bt_navigator]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536181.187476423] [panther.bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.298819012] [panther.lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.298974409] [panther.lifecycle_manager_navigation]: Activating waypoint_follower
+navigation  | [component_container_isolated-2] [INFO] [1777536181.299650079] [panther.waypoint_follower]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536181.299796003] [panther.waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.415780150] [panther.lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.415906074] [panther.lifecycle_manager_navigation]: Activating velocity_smoother
+navigation  | [component_container_isolated-2] [INFO] [1777536181.416521806] [panther.velocity_smoother]: Activating
+navigation  | [component_container_isolated-2] [INFO] [1777536181.416710228] [panther.velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.532635621] [panther.lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+navigation  | [component_container_isolated-2] [INFO] [1777536181.532836971] [panther.lifecycle_manager_navigation]: Managed nodes are active
+navigation  | [component_container_isolated-2] [INFO] [1777536181.533124884] [panther.lifecycle_manager_navigation]: Creating bond timer...
+navigation  | [map_saver_server-3] [INFO] [1777536192.118580051] [panther.map_saver]: Saving map from '/panther/map' topic to '/maps/map' file
+navigation  | [map_saver_server-3] [INFO] [1777536192.178674816] [map_io]: Received a 153 X 141 map @ 0.05 m/pix
+navigation  | [map_saver_server-3] [INFO] [1777536192.197962093] [map_io]: Writing map occupancy data to /maps/map.png
+navigation  | [map_saver_server-3] [INFO] [1777536192.202005711] [map_io]: Writing map metadata to /maps/map.yaml
+navigation  | [map_saver_server-3] [INFO] [1777536192.202257687] [map_io]: Map saved
+navigation  | [map_saver_server-3] [INFO] [1777536192.202285240] [panther.map_saver]: Map saved successfully
+navigation  | [map_saver_server-3] [INFO] [1777536207.118991441] [panther.map_saver]: Saving map from '/panther/map' topic to '/maps/map' file
+navigation  | [map_saver_server-3] [INFO] [1777536207.134292451] [map_io]: Received a 153 X 141 map @ 0.05 m/pix
+navigation  | [map_saver_server-3] [INFO] [1777536207.158740580] [map_io]: Writing map occupancy data to /maps/map.png
+navigation  | [map_saver_server-3] [INFO] [1777536207.163314284] [map_io]: Writing map metadata to /maps/map.yaml
+navigation  | [map_saver_server-3] [INFO] [1777536207.163611063] [map_io]: Map saved
+navigation  | [map_saver_server-3] [INFO] [1777536207.163643448] [panther.map_saver]: Map saved successfully
