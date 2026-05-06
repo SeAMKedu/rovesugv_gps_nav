@@ -6,7 +6,7 @@ bt_navigator:
     use_sim_time: false
     global_frame: map
     robot_base_frame: panther/base_link
-    odom_topic: /odom
+    odom_topic: /fixposition/odometry_enu_smooth
     bt_loop_duration: 10
     default_server_timeout: 20
     navigators: ["navigate_to_pose", "navigate_through_poses"]
@@ -57,7 +57,7 @@ controller_server:
     use_sim_time: false
 
     controller_frequency: 10.0
-    odom_topic: /odom
+    odom_topic: /fixposition/odometry_enu_smooth
     ostmap_update_timeout: 0.5
     
     min_x_velocity_threshold: 0.01
@@ -464,7 +464,7 @@ velocity_smoother:
     min_velocity: [-0.5, 0.0, -1.0]
     max_accel: [1.5, 0.0, 2.0]
     max_decel: [-1.5, 0.0, -2.0]
-    odom_topic: "odom" # /odom
+    odom_topic: /fixposition/odometry_enu_smooth #"odom"
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]
     velocity_timeout: 1.0
